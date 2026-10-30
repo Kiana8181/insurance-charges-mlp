@@ -34,6 +34,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_NOTEBOOK = ROOT / "notebooks" / "insurance_charges_mlp.ipynb"
 
 
+def display_path(path):
+    """Path relative to the repository root when possible (for log messages)."""
+    path = Path(path).resolve()
+    return path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+
+
 def execute(nb, notebook_path, timeout):
     print(f"Executing {notebook_path.name} ...")
     start = time.time()
@@ -49,7 +55,7 @@ def export_html(nb, site_dir):
     body, _ = HTMLExporter(template_name="lab").from_notebook_node(nb)
     out = site_dir / "index.html"
     out.write_text(body, encoding="utf-8")
-    print(f"Wrote {out.relative_to(ROOT)}")
+    print(f"Wrote {display_path(out)}")
 
 
 def collect_report_items(nb):
@@ -81,7 +87,7 @@ def save_figures(items, fig_dir):
     for item in items:
         if item["kind"] == "figure":
             (fig_dir / f"{item['name']}.png").write_bytes(item["png"])
-    print(f"Wrote {sum(i['kind'] == 'figure' for i in items)} figures to {fig_dir.relative_to(ROOT)}")
+    print(f"Wrote {sum(i['kind'] == 'figure' for i in items)} figures to {display_path(fig_dir)}")
 
 
 def build_pdf(nb, items, pdf_path):
@@ -133,7 +139,7 @@ def build_pdf(nb, items, pdf_path):
         if fig is not None:
             pdf.savefig(fig)
             plt.close(fig)
-    print(f"Wrote {pdf_path.relative_to(ROOT)}")
+    print(f"Wrote {display_path(pdf_path)}")
 
 
 def main():
@@ -153,7 +159,7 @@ def main():
         target = notebook_path if args.inplace else ROOT / "build" / notebook_path.name
         target.parent.mkdir(parents=True, exist_ok=True)
         nbformat.write(nb, target)
-        print(f"Saved executed notebook to {target.relative_to(ROOT)}")
+        print(f"Saved executed notebook to {display_path(target)}")
 
     export_html(nb, args.site_dir)
     items = collect_report_items(nb)

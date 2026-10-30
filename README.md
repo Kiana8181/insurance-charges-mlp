@@ -5,8 +5,7 @@ neural networks in PyTorch, from exploratory data analysis to a reproducible mod
 
 [![Run notebook and publish results](https://github.com/Kiana8181/insurance-charges-mlp/actions/workflows/notebook.yml/badge.svg)](https://github.com/Kiana8181/insurance-charges-mlp/actions/workflows/notebook.yml)
 
-- **Executed notebook (HTML):** published to GitHub Pages by the workflow at
-  `https://<your-github-username>.github.io/insurance-charges-mlp/`
+- **Executed notebook (HTML):** <https://kiana8181.github.io/insurance-charges-mlp/>
 - **Results report (PDF):** [`outputs/insurance_charges_mlp_results.pdf`](outputs/insurance_charges_mlp_results.pdf)
 - **Notebook:** [`notebooks/insurance_charges_mlp.ipynb`](notebooks/insurance_charges_mlp.ipynb)
 
@@ -141,7 +140,7 @@ and `outputs/models/enhanced_mlp.pth` (trained weights).
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-github-username>/insurance-charges-mlp.git
+git clone https://github.com/Kiana8181/insurance-charges-mlp.git
 cd insurance-charges-mlp
 ```
 
@@ -311,7 +310,7 @@ The workflow [`.github/workflows/notebook.yml`](.github/workflows/notebook.yml) 
 
 **One-time setup:** in the GitHub repository, open **Settings → Pages** and set **Source** to
 **GitHub Actions**. The site will then be served at
-`https://<your-github-username>.github.io/insurance-charges-mlp/`.
+<https://kiana8181.github.io/insurance-charges-mlp/>.
 
 ## Limitations
 
