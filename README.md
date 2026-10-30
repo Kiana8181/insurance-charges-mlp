@@ -3,7 +3,7 @@
 Predicting individual medical insurance charges from demographic and lifestyle data with fully connected
 neural networks in PyTorch, from exploratory data analysis to a reproducible model comparison.
 
-[![Run notebook and publish results](https://github.com/<your-github-username>/insurance-charges-mlp/actions/workflows/notebook.yml/badge.svg)](https://github.com/<your-github-username>/insurance-charges-mlp/actions/workflows/notebook.yml)
+[![Run notebook and publish results](https://github.com/Kiana8181/insurance-charges-mlp/actions/workflows/notebook.yml/badge.svg)](https://github.com/Kiana8181/insurance-charges-mlp/actions/workflows/notebook.yml)
 
 - **Executed notebook (HTML):** published to GitHub Pages by the workflow at
   `https://<your-github-username>.github.io/insurance-charges-mlp/`
