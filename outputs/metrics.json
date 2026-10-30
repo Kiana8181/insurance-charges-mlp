@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "epochs": 2000,
+  "learning_rate": 0.001,
+  "n_train": 1070,
+  "n_test": 268,
+  "log_target_metrics": {
+    "SimpleMLP1": {
+      "train_mse": 0.362475,
+      "test_mse": 0.342764,
+      "train_r2": 0.563268,
+      "test_r2": 0.618665
+    },
+    "SimpleMLP2": {
+      "train_mse": 0.178949,
+      "test_mse": 0.160062,
+      "train_r2": 0.784391,
+      "test_r2": 0.821926
+    },
+    "SimpleMLP3": {
+      "train_mse": 0.165176,
+      "test_mse": 0.145653,
+      "train_r2": 0.800986,
+      "test_r2": 0.837957
+    },
+    "SimpleMLP4": {
+      "train_mse": 0.137791,
+      "test_mse": 0.129683,
+      "train_r2": 0.833981,
+      "test_r2": 0.855724
+    },
+    "SimpleMLP5": {
+      "train_mse": 0.126236,
+      "test_mse": 0.127122,
+      "train_r2": 0.847903,
+      "test_r2": 0.858573
+    },
+    "EnhancedMLP": {
+      "train_mse": 0.165644,
+      "test_mse": 0.142952,
+      "train_r2": 0.800421,
+      "test_r2": 0.840962
+    }
+  },
+  "enhanced_mlp_dollar_metrics": {
+    "MAE_usd": 3078.4762,
+    "RMSE_usd": 6209.9162,
+    "R2_usd": 0.7516,
+    "R2_log": 0.841
+  }
+}
